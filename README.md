@@ -1,4 +1,4 @@
-# TM-devbox
+# Parisson DevBox
 Development environment for Telemeta and TimeSide
 
 
