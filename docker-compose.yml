@@ -67,8 +67,6 @@ rabbitmq:
   image: rabbitmq:3-management
   ports:
     - "15672:15672"
-  expose:
-    - "5672"
 
 app:
   image: parisson/telemeta:latest-dev
@@ -95,7 +93,6 @@ worker:
   links:
     - rabbitmq
     - db
-    - app
 
 nginx:
   image: nginx
