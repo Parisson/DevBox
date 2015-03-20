@@ -4,7 +4,7 @@ Development environment for Telemeta and TimeSide
 
 ## Install
 
-    source init.sh 
+    sh init.sh 
     
 ## Run 
 For Telemeta + TimeSide
