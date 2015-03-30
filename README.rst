@@ -3,7 +3,7 @@ Parisson DevBox
 
 Development environment for `Telemeta <https://github.com/Parisson/Telemeta>`_ and `TimeSide <https://github.com/Parisson/TimeSide>`_ based projects.
 
-Our docker composition bundles some powerfull applications and modern frameworks out-of-the-box like: Python, Numpy, Gstreamer, Django, Celery, MySQL, RabbitMQ, uWSGI, Nginx and many more.
+This docker based composition already bundles some powerfull applications and modern frameworks out-of-the-box like: Python, Numpy, Gstreamer, Django, Celery, MySQL, RabbitMQ, uWSGI, Nginx and many more.
 
 
 Install
@@ -27,11 +27,20 @@ For Telemeta + TimeSide, from the DevBox folder::
 
     docker-compose up
 
+then browse http://localhost:8000
+
+To start a python console in the python / django environment::
+
+    docker-compose run app examples/sandbox/manage.py shell
+
+
 For TimeSide only + `TimeSide-Diadems <https://github.com/ANR-DIADEMS/timeside-diadems>`_::
 
     docker-compose -f docker-compose-timeside.yml up
 
-Then browse http://localhost:8000
+The REST API is browsable at: http://localhost:8000/api/
+
+Note that the app and the static files are automatically reloaded when the code changes.
 
 
 Documentation
