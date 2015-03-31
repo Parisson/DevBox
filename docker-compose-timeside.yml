@@ -69,7 +69,7 @@ rabbitmq:
     - "15672:15672"
 
 app:
-  image: parisson/timeside-diadems:latest-dev
+  build: ./timeside-diadems
   volumes_from:
     - static
     - home
@@ -84,7 +84,7 @@ app:
     - db
 
 worker:
-  image: parisson/timeside-diadems:latest-dev
+  build: ./timeside-diadems
   volumes_from:
     - static
     - home
