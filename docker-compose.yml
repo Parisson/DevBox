@@ -34,6 +34,7 @@ log:
     - /var/log/nginx
     - /var/log/postgres
     - /var/log/uwsgi
+    - /var/log/elasticsearch
   command: /bin/true
 
 lib:
@@ -42,6 +43,7 @@ lib:
     - /var/lib/rabbitmq
     - /var/lib/postgres
     - ./var/lib/mysql:/var/lib/mysql
+    - ./var/lib/elasticseach:/var/lib/elasticseach
   command: /bin/true
 
 home:
@@ -68,6 +70,12 @@ rabbitmq:
   ports:
     - "15672:15672"
 
+search:
+  image: elasticsearch
+  volumes_from:
+    - lib
+    - log
+
 app:
   image: parisson/telemeta:latest-dev
   volumes_from:
@@ -82,6 +90,7 @@ app:
   links:
     - rabbitmq
     - db
+    - search
 
 worker:
   image: parisson/telemeta:latest-dev
