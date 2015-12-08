@@ -60,10 +60,10 @@ db:
     - lib
     - log
   environment:
-    - MYSQL_ROOT_PASSWORD=mysecretpassword
-    - MYSQL_DATABASE=sandbox
-    - MYSQL_USER=root
-    - MYSQL_PASSWORD=mysecretpassword
+    - MYSQL_ROOT_PASSWORD=awteckEb7
+    - MYSQL_DATABASE=telemeta
+    - MYSQL_USER=telemeta
+    - MYSQL_PASSWORD=iuvIlkyisFit2
 
 rabbitmq:
   image: rabbitmq:3-management
